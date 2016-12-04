@@ -1,0 +1,16 @@
+server:
+  port: 8000
+
+spring:
+  boot:
+    admin:
+      url: http://localhost:8100
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+
+info:
+  name: API Gateway
+
