@@ -15,13 +15,13 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
-jar {
-    baseName = 'ms'
-    version = '0.1.0'
-}
-
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+jar {
+    baseName = 'admin'
+    version = '0.1.0'
+}
 
 repositories {
     mavenCentral()
@@ -29,23 +29,16 @@ repositories {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-actuator'
-    compile 'org.springframework.boot:spring-boot-starter-data-rest'
-    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.boot:spring-boot-starter-websocket'
-//    compile 'org.springframework.cloud:spring-cloud-starter-config'
     compile 'org.springframework.cloud:spring-cloud-starter-eureka'
-    compile 'org.flywaydb:flyway-core'
-    compile 'org.jolokia:jolokia-core'
+    compile 'org.springframework.cloud:spring-cloud-config-server'
+
+    compile 'de.codecentric:spring-boot-admin-server:1.4.4'
+    compile 'de.codecentric:spring-boot-admin-server-ui:1.4.4'
 
     compileOnly 'org.springframework.boot:spring-boot-devtools'
 
-    compile 'de.codecentric:spring-boot-admin-starter-client:1.4.4'
-
-	runtime 'com.h2database:h2'
-
     testCompile 'org.springframework.boot:spring-boot-starter-test'
-    testCompile 'org.springframework.restdocs:spring-restdocs-mockmvc'
 }
 
 dependencyManagement {

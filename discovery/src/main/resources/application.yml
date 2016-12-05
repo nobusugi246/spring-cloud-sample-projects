@@ -7,13 +7,14 @@ info:
 spring:
   boot:
     admin:
-      context-path: /bootadmin
-      url: http://localhost:8100
-      
+      url: http://localhost:8110
+  application:
+    name: ServiceDiscovery
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8100/eureka/
-    healthcheck:
-      enabled: false
       
+logging:
+  path: logfile

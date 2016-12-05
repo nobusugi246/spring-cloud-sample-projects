@@ -3,9 +3,11 @@ package proto;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
-@EnableEurekaServer
+import de.codecentric.boot.admin.config.EnableAdminServer;
+
+@EnableDiscoveryClient
+@EnableAdminServer
 @SpringBootApplication
 public class Application {
 

@@ -1,1 +1,1 @@
-include 'gw', 'discovery', 'ms'
+include 'gw', 'discovery', 'contents', 'admin', 'frontend'

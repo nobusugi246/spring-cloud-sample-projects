@@ -16,7 +16,7 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
 jar {
-    baseName = 'discovery'
+    baseName = 'contents'
     version = '0.1.0'
 }
 
@@ -29,18 +29,24 @@ repositories {
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-actuator'
-//    compile 'org.springframework.cloud:spring-cloud-config-server'
-    compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'org.springframework.boot:spring-boot-starter-data-rest'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-websocket'
+    compile 'org.springframework.cloud:spring-cloud-starter-config'
+    compile 'org.springframework.cloud:spring-cloud-starter-eureka'
     compile 'org.jolokia:jolokia-core'
-    compile 'de.codecentric:spring-boot-admin-starter-client:1.4.4'
 
     compileOnly 'org.springframework.boot:spring-boot-devtools'
 
-//    compile 'de.codecentric:spring-boot-admin-server:1.4.4'
-//    compile 'de.codecentric:spring-boot-admin-server-ui:1.4.4'
+    compile 'de.codecentric:spring-boot-admin-starter-client:1.4.4'
+
+    runtime 'org.flywaydb:flyway-core'
+	runtime 'com.h2database:h2'
 
     testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.springframework.restdocs:spring-restdocs-mockmvc'
 }
 
 dependencyManagement {

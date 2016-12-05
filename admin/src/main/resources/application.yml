@@ -1,20 +1,20 @@
-server:
-  port: 8000
+server: 
+  port: 8110
+
+info:
+  name: AdminService
 
 spring:
   boot:
     admin:
       url: http://localhost:8110
   application:
-    name: APIGateWay
-
+    name: AdminService
+      
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8100/eureka/
-
-info:
-  name: API Gateway
 
 logging:
   path: logfile
