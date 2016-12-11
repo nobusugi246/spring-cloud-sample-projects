@@ -17,3 +17,9 @@ info:
 
 logging:
   path: logfile
+
+zuul:
+  routes:
+    front:
+      path: /front/**
+      serviceId: FrontendService

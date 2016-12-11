@@ -5,7 +5,7 @@ task cleanAll {
     subprojects.each { pj ->
       delete "${pj.name}/build", "${pj.name}/bin", "${pj.name}/logfile"
       delete "${pj.name}/${pj.name}.iml", "${pj.name}/out"
-      delete "${pj.name}/.classpath", "${pj.name}/.pj", "${pj.name}/.settings/"
+      delete "${pj.name}/.classpath", "${pj.name}/.project", "${pj.name}/.settings/"
     }
   }
 }
