@@ -1,6 +1,6 @@
 task cleanAll {
   doLast {
-    delete '.idea', '.gradle'
+    delete '.idea', '.gradle', 'logfile'
 
     subprojects.each { pj ->
       delete "${pj.name}/build", "${pj.name}/bin", "${pj.name}/logfile"
