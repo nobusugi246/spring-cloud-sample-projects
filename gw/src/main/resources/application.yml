@@ -4,7 +4,9 @@ server:
 spring:
   application:
     name: APIGateWay
-
+  output:
+    ansi:
+      enabled: ALWAYS
 eureka:
   client:
     serviceUrl:

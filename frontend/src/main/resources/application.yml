@@ -4,7 +4,9 @@ server:
 spring:
   application:
     name: FrontendService
-      
+  output:
+    ansi:
+      enabled: ALWAYS
 eureka:
   client:
     serviceUrl:

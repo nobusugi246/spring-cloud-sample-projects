@@ -7,7 +7,9 @@ info:
 spring:
   application:
     name: AdminService
-      
+  output:
+    ansi:
+      enabled: ALWAYS
 eureka:
   client:
     serviceUrl:
@@ -15,3 +17,16 @@ eureka:
 
 logging:
   path: logfile
+
+security:
+  basic:
+    enabled: false
+#   oauth2:
+#     client:
+#       clientId: proto
+#       clientSecret: protoSecret
+#       scope: proto
+#       access-token-uri: http://localhost:9999/uaa/oauth/token
+#       user-authorization-uri: http://localhost:9999/uaa/oauth/authorize
+#     resource:
+#       user-info-uri: http://localhost:9999/uaa/me

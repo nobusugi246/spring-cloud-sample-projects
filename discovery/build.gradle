@@ -35,7 +35,7 @@ dependencies {
     compile 'org.jolokia:jolokia-core'
     compile 'de.codecentric:spring-boot-admin-starter-client:1.4.4'
 
-    compileOnly 'org.springframework.boot:spring-boot-devtools'
+    compile 'org.springframework.boot:spring-boot-devtools'
 
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
